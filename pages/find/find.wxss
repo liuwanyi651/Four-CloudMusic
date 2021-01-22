@@ -1,0 +1,8 @@
+.search{
+  width: 630rpx;
+}
+.huatongimg{
+  width: 65rpx;
+  height: 65rpx;
+  padding: 20rpx 20rpx 10rpx 0rpx;
+}

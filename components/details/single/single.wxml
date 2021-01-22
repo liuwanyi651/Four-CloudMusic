@@ -1,0 +1,19 @@
+<view style="display: flex; justify-content: space-between;">
+<view style="display:flex;">
+   <image src="../../../assets/playsss.png" style="width:60rpx;height:60rpx;margin-left:10rpx;"></image>
+   <view style=" margin-top: 15rpx;margin-left:10rpx;">播放全部</view>
+</view>
+<image src="../../../assets/yes.png" style="width:60rpx;height:60rpx;margin-right:10rpx"></image>
+</view>
+<view wx:for="{{song}}"wx:key="index" bindtap="add" data-item="{{item}}" data-index="{{index}}">
+  <view style="display:flex;justify-content: space-between;  border-bottom: 2rpx solid rgb(206, 199, 199);"  >
+    <view>
+      <view style="font-size:35rpx;margin-left:20rpx;margin-top:20rpx">{{item.name}}</view>
+      <view style="display:flex;margin-top:10rpx; color: rgb(139, 126, 126);margin-left:20rpx;">
+        <view>{{item.artists[0].name}}</view>
+        <view>-{{item.album.name}}</view>
+      </view>
+    </view>
+    <image src="../../../assets/landscape.png" style="width:80rpx;height:80rpx;margin-top:20rpx"></image>
+  </view>
+</view>

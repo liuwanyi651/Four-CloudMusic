@@ -1,0 +1,89 @@
+.all{
+  width: 100%;
+  height: 100%;
+  background-color:rgb(216,30,6);
+  position: absolute
+}
+.kb{
+  height: 50rpx;
+}
+.pic{
+  width: 100%;
+  height: 300rpx;
+}
+.img{
+  width: 100rpx;
+   height: 100rpx;
+   border-radius:50%;
+}
+.mid{
+  align-items: center;
+}
+
+.placeholder-style{
+  margin: 18rpx 0;
+  width: 70%;
+  background-color: rgba(211, 207, 207,0.7);
+  height: 80rpx;
+  color:white;
+}
+.bottom{
+  display: flex;
+  justify-content: center;
+}
+.btnbox{
+  margin-top: 20rpx;
+  width: 70%;
+  display: flex;
+  justify-content:space-between;
+}
+.img {
+  animation: img 3s infinite;
+}
+@keyframes img{
+  0%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 10rpx;
+    /* border-radius: 50%; */
+  }
+  10%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 20rpx;
+  }
+  20%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 30rpx;
+  }
+  30%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 40rpx;
+  }
+  40%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 50rpx;
+  }
+  50%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 60rpx;
+  }
+  60%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 50rpx;
+  }
+  70%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 40rpx;
+  }
+  80%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 30rpx;
+  }
+  90%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 20rpx;
+  }
+  100%{
+    border: 1px solid rgb(228, 215, 215);
+    padding: 10rpx;
+  }
+}

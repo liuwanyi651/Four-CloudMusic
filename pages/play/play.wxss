@@ -1,0 +1,224 @@
+.urlpic {
+  width: 550rpx;
+  height: 550rpx;
+  border-radius: 50%;
+  animation: rock 20s linear infinite;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+
+.urlpi {
+  width: 550rpx;
+  height: 550rpx;
+  border-radius: 50%;
+  animation: rock 20s linear infinite;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-play-state: paused;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+.top {
+  background-color: rgba(255, 250, 240, 0);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 150rpx;
+}
+
+.topcen {
+  width: 580rpx;
+  height: 580rpx;
+  border-radius: 50%;
+  border: 1rpx solid rgb(163, 163, 163);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 400rpx;
+}
+
+.down {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 120rpx;
+}
+.downa{
+position: absolute;
+left: 40rpx;
+top: 20rpx;
+z-index: 9999;
+}
+.topfor,
+.downfor {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(138, 132, 132, 0.479);
+}
+
+.play {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.middle {
+  display: flex;
+  width: 80%;
+}
+
+.mid {
+  width: 70%;
+  position: absolute;
+  bottom: 290rpx;
+  color: rgb(112, 112, 112);
+  left: 80rpx;
+  z-index: 6;
+
+}
+
+.time {
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.timeall {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 310rpx;
+  position: absolute;
+  z-index: 5;
+}
+
+.bgImage {
+  filter: blur(30px);
+  position: absolute;
+  height: 100vw;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bgImage>image {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bom {
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  z-index: 7;
+  top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alllyric {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  height: 500rpx;
+  font-size: 30rpx;
+  margin-top: 200rpx;
+}
+
+.lyricfor {
+  margin-top: 20rpx;
+  width: 550rpx;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+
+.lyr {
+  width: 100%;
+  height: 60%;
+}
+
+.song {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 35rpx;
+
+}
+
+.singer {
+  display: flex;
+  font-size: 28rpx;
+}
+
+.red1 {
+  color: red;
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33rpx;
+
+}
+
+.display {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 34%;
+  border: 1rpx solid gray;
+  height: 70rpx;
+  z-index: 999;
+}
+
+.center1 {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  font-size: 30rpx;
+}

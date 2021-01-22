@@ -1,0 +1,77 @@
+<view bindtap="showPopup">
+  <image src="../../assets/menu.png" class="img"></image>
+</view>
+<!-- 左侧弹出层 -->
+<van-popup show="{{ show }}" position="left" custom-style="width:80%;height:100%;background:#F4F4F4"
+  bind:close="onClose" class="popupbox">
+  <!-- 1 -->
+  <view class="box">
+    <view class="name">
+      <view class="picname">
+        <van-image round width="100rpx" height="100rpx" src="https://img.yzcdn.cn/vant/cat.jpeg"
+          style=" margin:8rpx 10rpx;" />
+        <view bindtap="goLogin">立即登录></view>
+      </view>
+      <image src="../../assets/scan.png" class="smimg"></image>
+    </view>
+  </view>
+  <!-- 2 -->
+  <view class="box2">
+    <view class="card">
+      <view class="vipbox">
+        <view class="viptext">开通黑胶VIP</view>
+        <van-button round size="small" color="gray">会员中心</van-button>
+      </view>
+      <view class="li">立享17项专属特权</view>
+      <view class="li">黑胶vip仅5元，享超17项专属特权！</view>
+    </view>
+  </view>
+  <!-- 3 -->
+  <view class="box3">
+    <view class="group">
+      <van-cell title="我的消息" is-link icon="envelop-o" />
+      <van-cell title="云贝中心" is-link icon="medal-o" value="20云贝待领取" />
+      <van-cell title="创作中心" is-link icon="bulb-o" />
+    </view>
+  </view>
+  <!-- 4 -->
+  <view class="box3">
+    <view class="group">
+      <van-cell label="音乐服务" />
+      <van-cell title="云村有票" is-link icon="send-gift-o" />
+      <van-cell title="商城" is-link icon="shopping-cart-o" />
+      <van-cell title="游戏专区" is-link icon="hot-o" value="边听边玩赢黑胶" />
+      <van-cell title="口袋彩铃" is-link icon="phone-circle-o" />
+    </view>
+  </view>
+  <!-- 5 -->
+  <view class="box3">
+    <view class="group">
+      <van-cell label="其他" />
+      <van-cell title="设置" is-link icon="setting-o " />
+      <van-cell title="夜间模式" icon="closed-eye ">
+        <van-switch checked="{{ checked }}" bind:change="onChange" size="30rpx"/>
+      </van-cell>
+      <van-cell title="定时关闭" is-link icon="underway-o"/>
+      <van-cell title="个性装扮" is-link icon="gift-card-o " />
+      <van-cell title="边听边存" is-link icon="music-o" value="未开启" />
+      <van-cell title="在线听歌免流量" is-link icon="video-o " />
+      <van-cell title="音乐黑名单" is-link icon="warning-o " />
+      <van-cell title="青少年模式" is-link icon="passed" value="未开启" />
+      <van-cell title="音乐闹钟" is-link icon="service-o" />
+    </view>
+  </view>
+  <!-- 6 -->
+  <view class="box3">
+    <view class="group">
+      <van-cell title="我的订单" is-link icon="orders-o " />
+      <van-cell title="优惠券" is-link icon="send-gift-o" />
+      <van-cell title="帮助与反馈" is-link icon="smile-o" />
+      <van-cell title="分享网易云音乐" is-link icon="share-o" />
+      <van-cell title="关于" is-link icon="info-o " />
+    </view>
+  </view>
+  <view class="box3">
+    <van-button type="default" size="large" style="width:100%;">退出登录/关闭</van-button>
+  </view>
+</van-popup>

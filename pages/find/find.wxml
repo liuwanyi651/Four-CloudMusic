@@ -1,0 +1,9 @@
+<view class="top flex" > 
+  <menu></menu>
+  <van-search value="{{value}}" placeholder="请输入搜索关键词" class="search" bindtap="search"/>
+  <image src="../../assets/huatong.png" class="huatongimg"></image>
+</view> 
+<banner banner='{{banners}}'></banner>
+<recommend result='{{result}}'></recommend>
+<newsong newsong='{{newsong}}' newsongs='{{newsongs}}' album='{{album}}' albums='{{albums}}' djprogram='{{djprogram}}'></newsong>
+

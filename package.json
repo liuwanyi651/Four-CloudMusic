@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@vant/weapp": "^1.6.2",
+    "dayjs": "^1.9.7",
+    "moment": "^2.29.1",
+    "pubsub-js": "^1.9.1"
+  },
+  "name": "four-cloudmusic",
+  "version": "1.0.0"
+}

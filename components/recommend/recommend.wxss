@@ -1,0 +1,58 @@
+.songlist{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text{
+  font-size: 36rpx;
+  font-weight: bold;
+  padding:10rpx 30rpx;
+}
+.scrollbox{
+  border-bottom:1px solid #EEE ;
+}
+.rollbox{
+  display: flex;
+}
+.imgbox{
+  display: flex;
+  border-radius:25rpx;
+  overflow: hidden;
+}
+.result{
+  padding:20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  width:200rpx;
+  height:200rpx;
+  position: relative;
+  top: 0;
+}
+.title{
+  font-size: 24rpx;
+  /* 多行 */
+  width: 200rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.number{
+  display: flex;
+  margin-top: 10rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  font-size: 24rpx;
+  background-color: rgba(189, 186, 186, 0.7);
+  border-radius:18rpx ;
+  padding: 5rpx 5rpx;
+}
+.image{
+  width: 20rpx;
+  height: 20rpx;
+}

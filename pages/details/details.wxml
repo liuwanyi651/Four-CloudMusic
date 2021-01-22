@@ -1,0 +1,84 @@
+<!--搜索-->
+<view class="flex">
+  <view bindtap="back">
+    <image src="../../assets/arrows.png" class="img"></image>
+  </view>
+  <view class="searchInput">
+    <input type="text" placeholder="华晨宇 最近很火哦" class="seainput" bindinput="content" value="{{content}}"
+      bindconfirm="Search" />
+  </view>
+  <view wx:if="{{content.length>0}}">
+    <image src="../../assets/delete.png" class="img" bindtap="cancel"></image>
+  </view>
+</view>
+<!--小分类-->
+<van-tabs active="{{ active }}"> 
+  <van-tab title="综合">
+    <view style="  background-color: rgb(207, 200, 200);">
+      <view style="width:900rpx;height:10rpx;"></view>
+      <view class="sing">
+        <view style="border-bottom: 2rpx solid rgb(218, 187, 187);">
+          <view style="width:100%;height:10rpx"></view>
+          <view style="display:flex;justify-content: space-between;margin-top:10rpx">
+            <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">单曲</view>
+            <view style="display:flex;border: 2rpx solid rgb(46, 43, 43);margin-right:10rpx;border-radius: 30rpx;">
+              <image src="../../assets/playss.png"
+                style="width:40rpx; height:40rpx; margin-top: 10rpx;margin-left: 6rpx;">
+              </image>
+              <view style="margin-top:6rpx;margin-right: 14rpx;">播放</view>
+            </view>
+          </view>
+        </view>
+        <view wx:for="{{single.songs}}" wx:key="index">
+          <view style="display:flex; justify-content: space-between;border-bottom: 2rpx solid rgb(218, 187, 187);">
+            <view style="margin-left:20rpx;margin-top:20rpx;">
+              <view>{{item.name}}</view>
+              <view style="display:flex;font-size:30rpx;color: rgb(126, 116, 116);">
+                <view>{{item.ar[0].name}}</view>
+                <view>-{{item.al.name}}</view>
+              </view>
+            </view>
+            <image src="../../assets/landscape.png" style="width:50rpx;height:50rpx;margin-top:25rpx"></image>
+          </view>
+        </view>
+        <view style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);">
+          <view style="font-size:35rpx">{{single.moreText}}</view>
+          <image src="../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+        </view>
+        <view style="width:900rpx;height:20rpx;"></view>
+      </view>
+      <view style="width:900rpx;height:10rpx;"></view>
+      <view>
+        <playlist song="{{song}}" video="{{video}}" related="{{related}}" singer="{{singer}}" album="{{album}}"
+          dj="{{dj}}" user="{{user}}"></playlist>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="单曲">
+    <single name="{{name}}"></single>
+  </van-tab>
+  <van-tab title="歌单">
+    <song name="{{name}}"></song>
+  </van-tab>
+  <van-tab title="视频">
+     <!-- <vid name="{{name}}"></vid> -->
+  </van-tab>
+  <van-tab title="声音">
+    <!-- <voice name="{{name}}"></voice> -->
+  </van-tab>
+  <van-tab title="播单">
+    <sowingsingle name="{{name}}"></sowingsingle>
+  </van-tab>
+  <van-tab title="云圈">
+    <cloudcircle name="{{name}}"></cloudcircle>
+  </van-tab>
+  <van-tab title="歌手">
+    <singer name="{{name}}"></singer>
+  </van-tab>
+  <van-tab title="专辑">
+    <album name="{{name}}"></album>
+  </van-tab>
+  <van-tab title="用户">
+    <user name="{{name}}"></user>
+  </van-tab>
+</van-tabs>

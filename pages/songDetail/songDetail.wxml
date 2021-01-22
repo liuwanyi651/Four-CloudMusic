@@ -1,0 +1,37 @@
+
+<view class="songDetailContainer">
+  <view class="songName">{{song.name}}</view>
+  <view class="auther">{{song.ar[0].name}}</view>
+  <view class="circle"></view>
+  <image class="imgPlayer {{isPlay && 'playerRotate'}}" src="../../assets/player_bar.png"></image>
+  <view class="discContainer {{isPlay && 'discAnimation'}}">
+    <image class="disc" src="../../assets/disc.png"></image>
+    <image class="musicImg" src="{{song.al.picUrl}}"></image>
+  </view>
+  <!-- 进度条控制区域 -->
+  <view class="progressControl">
+    <text>{{currentTime}}</text>
+    <!-- 总进度条 -->
+    <view class="barControl">
+      <!-- 实时进度条 -->
+      <view class="realTimeProgressBar" style="width:{{currentWidth + 'rpx'}}">
+        <!-- 小圆球 -->
+        <view class="smallBall">
+        </view>
+      </view>
+    </view>
+    <text>{{durationTime}}</text>
+  </view>
+  <!-- 底部播放区域 -->
+  <view class="musicControl">
+    <image src="../../assets/shuffleplay.png" class="imgmusic"></image>
+    <image src="../../assets/on.png"  class="imgmusic" bindtap="handleSwitch" id="pre"></image>
+    <image src="../../assets/startplaying.png"  class="imgmus" wx:if="{{isPlay===false}}" bindtap="handlemusicPlay"></image>
+    <image src="../../assets/playing.png"  class="imgmus" wx:if="{{isPlay===true}}" bindtap="handlemusicPlay"></image>
+    <image src="../../assets/nextplay.png"  class="imgmusic" bindtap="handleSwitch" id="next"></image>
+    <image src="../../assets/singmore.png"  class="imgmusic"></image>
+  </view>
+</view>
+
+
+

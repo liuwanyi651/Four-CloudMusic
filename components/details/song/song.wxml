@@ -1,0 +1,15 @@
+<view wx:for="{{song}}" wx:key="index">
+   <view style="display: flex; margin-top: 10rpx;">
+     <view style="margin-left:10rpx;">
+      <image src="{{item.coverImgUrl}}" style="width:120rpx;height:120rpx;border-radius: 20rpx;"></image>
+     </view>
+     <view style="margin-left:5rpx;">
+       <view style="margin-top:5rpx">{{item.name}}</view>
+       <view style="display:flex;margin-top:10rpx;font-size:27rpx;color: rgb(139, 126, 126);">
+         <view>{{item.trackCount}}首</view>
+         <view>by{{item.creator.nickname}},</view>
+         <view>播放{{item.playCount}}</view>
+       </view>
+     </view>
+   </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="all"> 
+  <view class="top ">
+    <view class="kb"></view>
+    <view class="pic flex j-center a-center">
+    <image src="/assets/red-wyy.png" class="img"></image>
+    </view>
+  </view>
+  <view class="mid"></view>
+  <view class="bottom t-center">
+    <view class="cw">网易云音乐 • 音乐的力量</view>
+    <view class="cg fs12 pdtb10">
+      网易云音乐支持IPv6网络
+    </view>
+  </view>
+</view> 
+

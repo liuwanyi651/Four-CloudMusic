@@ -1,0 +1,18 @@
+<view class="all">
+  <view class="top ">
+    <view class="kb"></view>
+    <view class="pic flex j-center a-center">
+      <image src="/assets/ww.png" class="img"></image>
+    </view>
+  </view>
+  <view class="mid flex-clum">
+    <input placeholder="手机号：" class="placeholder-style" data-type="userPhone"  bindblur="handleInput"/>
+    <input placeholder="密码：" password='true' class="placeholder-style" data-type="userPassword" bindblur="handleInput" value="{{password}}"/>
+  </view>
+  <view class="bottom">
+    <view class="btnbox">
+      <van-button  type="info" bindtap="login" class="btnlogo">立即登录</van-button>
+      <van-button  color="#7232dd" bindtap="goenroll" class="btnlogo">立即注册</van-button>
+    </view>
+  </view>
+</view>

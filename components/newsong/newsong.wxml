@@ -1,0 +1,56 @@
+<view class="songlist">
+  <view class="list">
+    <view class="'text'{{num === 0 ?'active':''}}" bindtap="goOne">新歌</view>
+    <view class="'text'{{num === 1 ?'active':''}}" bindtap="goTwo">新碟</view>
+    <view class="'text1'{{num === 2 ?'active':''}}" bindtap="goThree">数字专辑</view>
+  </view>
+  <van-button round type="default" size="mini" plain hairline>更多></van-button>
+</view>
+<!-- 横向滚动 -->
+<scroll-view scroll-x="true" class="scrollbox">
+  <!-- 新歌 -->
+    <view wx:if="{{num===0}}" class="rollbox">
+      <view wx:for="{{newsong}}" wx:key="index" class="result">
+        <view class="imgbox">
+          <image src="{{item.picUrl}}" class="img"></image>
+        </view>
+        <view>
+          <view class="title">{{item.name}}</view>
+          <view class="titlea">{{item.song.artists[0].name}}</view>
+        </view>
+        <view>
+          <image src="../../assets/play.png" class="image"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 新碟 -->
+    <view wx:if="{{num===1}}" class="rollbox">
+      <view wx:for="{{album}}" wx:key="index" class="result">
+        <view class="imgbox">
+          <image src="{{item.picUrl}}" class="img"></image>
+        </view>
+        <view>
+          <view class="title">{{item.name}}</view>
+          <view class="titlea">{{item.company}}</view>
+        </view>
+        <view>
+          <image src="../../assets/play.png" class="image"></image>
+        </view>
+      </view>
+    </view>
+    <!-- 数字专辑 -->
+    <view wx:if="{{num===2}}" class="rollbox">
+      <view wx:for="{{djprogram}}" wx:key="index" class="result">
+        <view class="imgbox">
+          <image src="{{item.picUrl}}" class="img"></image>
+        </view>
+        <view>
+          <view class="title">{{item.name}}</view>
+          <view class="titlea">{{item.copywriter}}</view>
+        </view>
+        <view>
+          <image src="../../assets/play.png" class="image"></image>
+        </view>
+      </view>
+    </view>
+</scroll-view>

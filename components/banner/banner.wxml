@@ -1,0 +1,20 @@
+<swiper indicator-dots="true" autoplay="true" duration="500" circular="true">
+  <swiper-item wx:for="{{banner}}" wx:key="index">
+    <view class="pic">
+      <view class="picbox">
+        <image src="{{item.imageUrl}}" class="img"></image>
+        <view class="text" style="background-color:{{item.titleColor}}">{{item.typeTitle}}</view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+<scroll-view scroll-x="{{scroll}}" class="scrollbox">
+  <view class="arrbox">
+    <view wx:for="{{arr}}" wx:key="index" class="arr">
+      <view class="bg">
+        <image src="{{item.img}}" class="{{index===0?'box1':'box2'}}" data-item="{{item}}" bindtap="go"></image>
+      </view>
+      <view class="title">{{item.title}}</view>
+    </view>
+  </view>
+</scroll-view>

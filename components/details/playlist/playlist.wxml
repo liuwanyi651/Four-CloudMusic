@@ -1,0 +1,141 @@
+<view class="sing">
+  <!--歌单-->
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">歌单</view>
+  <view wx:for="{{song.playLists}}" wx:key="index">
+    <view style="display: flex;margin-top:10rpx;margin-left；10rpx;">
+      <view style="margin-left:20rpx">
+        <image src="{{item.coverImgUrl}}" style="width:120rpx;height:120rpx; border-radius: 10rpx;"></image>
+      </view>
+      <view style="margin-left:10rpx;margin-top:10rpx">
+        <view style="font-size:35rpx">{{item.name}}</view>
+        <view style="display:flex;font-size:27rpx;color: rgb(119, 110, 110);">
+          <view>{{item.trackCount}}首，</view>
+          <view>by{{item.creator.nickname}},</view>
+          <view>播放{{item.playCount}}</view>
+        </view>
+        <view style="display:flex;font-size:27rpx;">
+          <view style="margin:5rpx">{{item.officialTags[0]}}</view>
+          <view style="margin:5rpx">{{item.officialTags[1]}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{song.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--视频-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">视频</view>
+  <view wx:for="{{video.videos}}" wx:key="index">
+    <view style="display:flex;">
+      <view style="margin-left:20rpx;margin-top:10rpx">
+        <image src="{{item.coverUrl}}" style="width:160rpx;height:120rpx; border-radius: 10rpx;"></image>
+      </view>
+      <view style="margin-top:5rpx;margin-left:10rpx;">
+        <view style="margin-top:5rpx;margin-left；20rpx;font-size:35rpx;">{{item.title}}</view>
+        <view style="display:flex;margin-left；10rpx;color: rgb(119, 110, 110);margin-top:5rpx;">
+          <view>{{item.durationms}},</view>
+          <view>by{{item.creator[0].userName}},</view>
+          <view>{{item.playTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{video.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--相关推荐-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">相关搜索</view>
+  <view style="display:flex;flex-wrap: wrap;">
+    <view wx:for="{{related.sim_querys}}" wx:key="index">
+      <view class="related">{{item.keyword}}</view>
+    </view>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--歌手-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">歌手</view>
+  <view wx:for="{{singer.artists}}" wx:key="index">
+    <view style="display:flex;margin-left:20rpx">
+      <view>
+        <image src="{{item.img1v1Url}}" style="width:120rpx;height:120rpx; border-radius: 50%;"></image>
+      </view>
+      <view style="display:flex; margin-top:25rpx;margin-left:10rpx">
+        <view style="width:400rpx;color: rgb(105, 100, 100);">{{item.name}}</view>
+        <view wx:if="{{item.accountId}}" style="display:flex;">
+          <image src="../../../assets/playsss.png" style="width:40rpx;height:40rpx"></image>
+          <view style="color: rgb(105, 100, 100);">已入驻</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{singer.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--专辑-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">专辑</view>
+  <view wx:for="{{album.albums}}"wx:key="index">
+    <view style="display:flex;">
+      <image src="{{item.blurPicUrl}}" style="width:120rpx;height:120rpx;border-radius: 20rpx;margin-top:10rpx"></image>
+      <view style="margin-left:20rpx;margin-top:10rpx">
+        <view>{{item.name}}</view>
+        <view style="display:flex;">
+          <view>{{item.artist.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{album.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--电台-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">电台</view>
+  <view wx:for="{{dj.djRadios}}"wx:key="index">
+    <view style="display:flex;">
+      <image src="{{item.picUrl}}" style="width:120rpx;height:120rpx;border-radius: 20rpx;margin-top:10rpx;margin-left:10rpx;"></image>
+      <view style="margin-top:20rpx; margin-left:20rpx">{{item.name}}</view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{dj.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>
+<!--用户-->
+<view class="sing">
+  <view style=" margin-top: 15rpx;margin-left: 10rpx; font-size: 40rpx;">用户</view>
+  <view wx:for="{{user.users}}" wx:key="index">
+    <view style="display:flex;">
+      <image src="{{item.avatarUrl}}" style="width:120rpx;margin-left:20rpx;margin-top:20rpx;height: 120rpx;  border-radius: 50%; border: 2rpx solid rgb(202, 198, 198);"></image>
+      <view style="margin-top:35rpx; margin-left:20rpx;">{{item.nickname}}</view>
+    </view>
+  </view>
+  <view
+    style="display:flex;justify-content: center;margin-top:15rpx; color: rgb(119, 110, 110);   border-top: 2rpx solid rgb(129, 119, 119);">
+    <view style="font-size:35rpx">{{user.moreText}}</view>
+    <image src="../../../assets/rightarrow.png" style="width:40rpx; height:40rpx"></image>
+  </view>
+</view>
+<view style="width:900rpx;height:10rpx;"></view>

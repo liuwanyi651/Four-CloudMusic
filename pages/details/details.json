@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-tab": "/vant/tab/index",
+    "van-tabs": "/vant/tabs/index",
+    "playlist":"../../components/details/playlist/playlist",
+    "single":"../../components/details/single/single",
+    "song":"../../components/details/song/song"
+  }
+}

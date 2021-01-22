@@ -1,0 +1,25 @@
+<!-- 搜索框 -->
+<view class="flex">
+  <view bindtap="back">
+    <image src="../../assets/arrows.png" class="img"></image>
+  </view>
+  <view class="searchInput">
+    <input type="text" placeholder="华晨宇 最近很火哦" class="seainput" bindinput="content" value="{{content}}"
+      bindconfirm="Search" />
+  </view>
+  <view wx:if="{{content.length>0}}">
+    <image src="../../assets/delete.png" class="img" bindtap="cancel"></image>
+  </view>
+</view>
+<!-- tab标签横向滚动 -->
+<van-tabs active="{{ active }}">
+  <van-tab title="综合">内容 1</van-tab>
+  <van-tab title="单曲">内容 2</van-tab>
+  <van-tab title="歌单">内容 3</van-tab>
+  <van-tab title="视频">内容 4</van-tab>
+  <van-tab title="播单">内容 5</van-tab>
+  <van-tab title="云圈">内容 6</van-tab>
+  <van-tab title="歌手">内容 6</van-tab>
+  <van-tab title="专辑">内容 6</van-tab>
+  <van-tab title="用户">内容 6</van-tab>
+</van-tabs>

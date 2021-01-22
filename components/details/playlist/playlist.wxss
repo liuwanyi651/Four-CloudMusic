@@ -1,0 +1,16 @@
+/* components/details/playlist/playlist.wxss */
+.sing{
+  margin: 10rpx;
+  width: 95%;
+  margin:2.5%;
+  border-radius: 10rpx;
+  background-color: white;
+  
+}
+.related{
+  border: 2rpx solid rgb(128, 120, 120);
+  border-radius: 20rpx;
+  margin: 20rpx;
+  color: rgb(92, 90, 90);
+ 
+}

@@ -1,0 +1,76 @@
+<view class="box">
+	<!-- 毛玻璃 -->
+	<view class="bgImage">
+		<image src="{{img}}" />
+	</view>
+
+	<view class="top">
+		<view class="topcen" wx:if="{{showlyric===false}}">
+			<image src="{{img}}" class="{{stop===true?'urlpi':'urlpic'}}"></image>
+		</view>
+	</view>
+	<!-- 滑块上面 -->
+	<view class="up">
+		<view wx:for="{{up}}" wx:key="index" class="topfor">
+			<image src="{{item}}" style="width:40rpx;height:40rpx"></image>
+		</view>
+	</view>
+	<!-- 滑块左右的时间 -->
+	<view class="timeall">
+		<view class="time">
+			<view>{{nowtime}}</view>
+			<view>{{showTotalTime}}</view>
+		</view>
+	</view>
+	<!-- 滑块 -->
+	<slider value="{{value}}" inactive-color="rgb(112, 112, 112)" active-color="red" class="mid" min="0" max="{{maxtiem}}" step="1" bindchange="change" bindchanging="changeing" />
+
+	<!-- 下面icon -->
+	<view class="down">
+		<view wx:for="{{down}}" wx:key="index" class="downfor">
+
+			<!-- 播放/暂停按钮 -->
+			<image wx:if="{{index===2 && stop=== !true}}" src="{{item}}" bindtap="stop" style="width:90rpx;height:90rpx"></image>
+			<image wx:if="{{index===2 && stop===!false}}" src="../../images/stop.png" bindtap="stop" style="width:90rpx;height:90rpx"></image>
+
+
+			<!-- 其他图标 -->
+			<image wx:if="{{index===1}}" src="{{item}}" bindtap="above" style="width:45rpx;height:45rpx"></image>
+			<image wx:if="{{index===3}}" src="{{item}}" bindtap="following" style="width:45rpx;height:45rpx"></image>
+			<image wx:if="{{index===4}}" src="{{item}}" bindtap="stop" style="width:45rpx;height:45rpx"></image>
+		</view>
+    	<view class="downa">
+		<!-- 列表循环/单曲循环/随机播放图标 -->
+		<image wx:if="{{cycle ===0}}" src="../../images/cycle.png" bindtap="cycles" style="width:45rpx;height:45rpx"></image>
+		<image wx:if="{{cycle ===1}}" src="../../images/singcycle.png" bindtap="Singcycle" style="width:45rpx;height:45rpx"></image>
+		<image wx:if="{{cycle ===2}}" src="../../images/random.png" bindtap="random" style="width:45rpx;height:45rpx"></image>
+	</view>
+	</view>
+	<!-- 歌词 -->
+	<view class="bom" bindtap="showlyric">
+		<view catchlongtap="lyr">
+			<scroll-view scroll-y="true" class="{{showlyric===true?'display':'none'}}" style="height:600rpx;" scroll-with-animation scroll-top="{{location*30}}" wx:if="{{showlyric===true}}" scroll-top="{{location*32}}" bindscroll="scroll" bindtouchstart="start" bindtouchend="end">
+				<view style="height:284rpx"></view>
+				<view wx:for="{{lyric}}" wx:key="index" class="lyricfor" style="text-align:center;">
+					<view class="{{location===index?'red1':''}}">{{item}}</view>
+				</view>
+				<view style="height:300rpx"></view>
+			</scroll-view>
+		</view>
+	</view>
+	<!-- 歌名,歌手 -->
+	<view class="song">
+		<view style="margin-top:20rpx">{{songname}}</view>
+		<view class="singer">
+			<view wx:for="{{singer}}" wx:key="index" style="margin-left:20rpx">{{item.name}}</view>
+		</view>
+	</view>
+
+	<!-- 滚动水平线 -->
+	<view class="center" wx:if='{{isScroll===true}}'>
+		<view class="center1">
+			<view>{{lyrictimeshow}}</view>
+			<view bindtap="goto">播放</view>
+		</view>
+	</view>
+</view>

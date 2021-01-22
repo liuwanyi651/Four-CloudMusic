@@ -1,0 +1,141 @@
+.songDetailContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 底座 */
+.circle{
+  position: relative;
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius:50%;
+  background-color: #fff;
+  margin: 10rpx 0;
+}
+/* 摇杆 */
+.imgPlayer{
+  position: relative; 
+  z-index: 99;
+  top: -67rpx;
+  left: 69rpx;
+  width: 196rpx;
+  height: 294rpx;
+  transform-origin: 30rpx 0; /*旋转中心点 x轴转40 y轴不动*/
+  transform: rotate(-25deg);
+  transition:transform 1s ;
+  /* border: 1rpx solid red; */
+}
+.playerRotate{
+  transform: rotate(0deg);
+}
+/* 磁盘区域 */
+.discContainer{
+  position: relative;
+  top: -201rpx;
+  width: 570rpx;
+  height: 570rpx;
+  /* border: 1rpx solid red; */
+}
+.discAnimation{
+  animation: disc 6s linear infinite; /*infinite 一直循环*/
+  animation-delay:1s ; /*延迟一秒之后 光盘再转*/
+}
+/* keyframes:设置动画帧
+1)form to 
+  - 使用于简单的动画，只有起始帧和结束帧
+  - 北京-上海 直达
+2）百分比
+  - 多用于复杂的动画，动画不止两帧
+  - 北京-上海---> 北京-天津-深圳-上海
+  - 0%-100%，可以任意拆分
+ */
+@keyframes disc{
+  form{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+
+}
+.disc{
+  width: 100%;
+  height: 100%;
+}
+.musicImg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto; /*用定位的都为0的方式+ margin: auto;让子元素在父元素水平居中*/
+  width: 360rpx;
+  height: 360rpx;
+  border-radius:50%;
+}
+/* 底部区域 */
+.musicControl{
+  position: absolute;
+  bottom: 40rpx;
+  left: 0rpx;
+  border-top:1rpx solid #fff ;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.imgmusic{
+  padding: 10rpx;
+  margin-top: 35rpx;
+  width: 20%;
+  width: 60rpx;
+  height: 60rpx;
+}
+.imgmus{
+  padding: 10rpx;
+  margin-top: 20rpx;
+  width: 20%;
+  width: 80rpx;
+  height: 80rpx;
+}
+/* 进度条控制区域 */
+.progressControl{
+  position: absolute;
+  bottom: 200rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  /* border:1rpx solid red; */
+}
+.barControl{
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background: rgba(0,0,0,0.4);
+  margin: auto;
+}
+.realTimeProgressBar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100rpx;
+  height: 4rpx;
+  background: red;
+  z-index: 1;
+}
+/* 小圆球 */
+.smallBall{
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+
+}

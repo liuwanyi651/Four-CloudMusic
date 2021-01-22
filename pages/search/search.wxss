@@ -1,0 +1,67 @@
+.img{
+  padding: 20rpx 20rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.searchInput{
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+  width: 80%;
+  height: 55rpx;
+  border-bottom: 2rpx solid rgb(201, 199, 199);
+}
+.seainput{
+  width: 90%;
+}
+.women{
+  font-size: 30rpx;
+  color:black;
+}
+.load{
+  margin-right: 10rpx;
+}
+.img1{ 
+  width: 40rpx;
+  height: 40rpx;
+}
+.women1{
+  font-size: 30rpx;
+  color: rgba(73, 72, 72, 0.667);
+}
+.rsbox{
+  padding: 3rpx 7rpx;
+  /* background-color: rgb(211, 205, 205); */
+  border-radius:35rpx;
+}
+.resou{
+  width: 320rpx;
+  padding:8rpx 8rpx;
+}
+.num{
+  padding: 5rpx 6rpx;
+}
+.color{
+  color: red;
+}
+.image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.reimg{
+  width: 100%;
+  height: 1000rpx;
+}
+.next{
+  width: 20rpx;
+  height: 20rpx;
+}
+.word{
+  padding: 20rpx 20rpx;
+}
+.hisword{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  padding: 8rpx 10rpx;
+  background-color: #EEE;
+  border-radius:20rpx;
+}

@@ -1,0 +1,65 @@
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 23rpx 0rpx;
+}
+.box1{
+  display: flex;
+  align-items: center;
+}
+.name{
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.picname{
+  display: flex;
+  align-items: center;
+}
+.smimg{
+  width: 60rpx;
+  height: 60rpx;
+}
+.box2{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius:40rpx;
+}
+.card{
+  height:220rpx;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(168,166,167);
+}
+.vipbox{
+  margin-top:12rpx;
+  display: flex;
+  padding: 10rpx 30rpx;
+}
+.viptext{
+  font-size: 40rpx;
+  color: white;
+  margin-right: 155rpx;
+}
+.li{
+  color: white;
+  font-size:24rpx;
+  padding:10rpx 28rpx;
+  color: rgb(243, 240, 240);
+}
+.box3{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius:40rpx;
+}
+.group{
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,22 @@
+
+<view class="songlist">
+  <view class="text">推荐歌单</view>
+  <van-button round type="default" size="mini" plain hairline>更多></van-button>
+</view>
+<scroll-view scroll-x="{{scroll}}" class="scrollbox">
+  <view class="rollbox">
+    <view wx:for="{{result}}" wx:key="index" class="result">
+      <view class="imgbox">
+        <image src="{{item.picUrl}}" class="img">
+          <view class="number">
+             <view class="numberbox">
+               <image src="../../assets/play-w.png" class="image"></image>
+              {{item.playCount}}
+             </view>
+           </view>
+        </image>
+      </view>
+      <view class="title">{{item.name}}</view>
+    </view>
+  </view>
+</scroll-view>

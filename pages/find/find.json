@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "menu":"../../components/menu/menu",
+    "banner":"../../components/banner/banner",
+    "recommend":"../../components/recommend/recommend",
+    "newsong":"../../components/newsong/newsong",
+    "van-search":"/vant/search/index"
+  }
+}

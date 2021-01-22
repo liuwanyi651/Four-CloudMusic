@@ -1,0 +1,94 @@
+<!-- 搜索框 -->
+<view class="flex">
+  <view bindtap="back">
+    <image src="../../assets/arrows.png" class="img"></image>
+  </view>
+  <view class="searchInput">
+    <input type="text" placeholder="华晨宇 最近很火哦" class="seainput" bindinput="content" value="{{content}}"
+      bindconfirm="Search" />
+  </view>
+  <view wx:if="{{content.length>0}}">
+    <image src="../../assets/delete.png" class="img" bindtap="cancel"></image>
+  </view>
+</view>
+<!-- 搜索历史 及清空 -->
+<view wx:if="{{flag===0}}">
+  <view class="flex j-center mt10">
+    <view class="flex j-betw w-90 ">
+      <view class="women">历史</view>
+      <view class="flex" bindtap="clearHistory">
+        <view class="load">
+          <image class="img1" src="../../assets/recycle.png"></image>
+        </view>
+        <view class="women1">清空</view>
+      </view>
+    </view>
+  </view>
+  <!-- 显示历史记录 -->
+<view class="flex j-center">
+  <view class="cg flex w-90">
+    <view wx:for="{{arras}}" wx:key="index" class="hisword">
+      <view>{{item}}</view>
+    </view>
+  </view>
+</view>
+  <!--热搜榜-->
+  <view class="flex j-center mt10">
+    <view class="flex j-betw w-90 ">
+      <view class="women">热搜榜</view>
+      <view class="flex">
+        <view class="load flex rsbox">
+          <image class="img1" src="../../assets/play.png"></image>
+          <view class="women1">播放</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bbs mt10"></view>
+  <!-- 热搜的数据 -->
+  <view class="flex j-center mt5">
+    <view class="flex j-betw w-90 ">
+      <view class="flex f-wrap">
+        <view wx:for="{{data}}" wx:key="index" class="resou fs12" bindtap="details" data-item="{{item}}">
+          <view class="flex">
+            <view class="'num'{{(index===0||index===1||index===2)?'color':''}}">{{index+1}}</view>
+            <view class="{{(index===0||index===1||index===2)?'color':''}}">{{item.searchWord}}</view>
+            <view>
+              <image src="{{item.iconUrl}}" class="image"></image>
+            </view>
+          </view>
+        </view>
+        <!-- 展开热搜 -->
+        <view class="flex" wx:if="{{!show}}" bindtap="show">
+          <view class="cg fs14 ml10 ">展开更多热搜</view>
+          <view class="flex a-center">
+            <image src="../../assets/next.png" class="next"></image>
+          </view>
+        </view>
+        <view wx:for="{{dataa}}" wx:key="index" class="resou fs12" wx:if="{{show}}">
+          <view class="flex">
+            <view class="num">{{index+11}}</view>
+            <view>{{item.searchWord}}</view>
+            <view>
+              <image src="{{item.iconUrl}}" class="image"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+    <image src="../../assets/rs.png" class="reimg"></image>
+  </view>
+</view>
+<!-- 搜索弹出展示 -->
+<view wx:if="{{flag===1}}">
+  <view class="flex j-center mt5">
+    <view class="flex-clum j-betw w-90 bs">
+      <view class="cb fs16 " style="padding: 0 35rpx;">搜索"{{content}}"</view>
+      <view wx:for="{{allMatch}}" wx:key="index">
+        <van-cell title="{{item.keyword}}" icon="search" />
+      </view>
+    </view>
+  </view>
+</view>

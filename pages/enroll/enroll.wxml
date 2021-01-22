@@ -1,0 +1,24 @@
+<view class="all">
+  <view class="top ">
+    <view class="kb"></view>
+    <view class="pic flex j-center a-center">
+      <image src="/assets/ww.png" class="img"></image>
+    </view>
+  </view>
+  <view class="mid flex-clum">
+    <input placeholder="用户名：" class="placeholder-style" bindblur="username"/>
+    <input placeholder="手机号：" class="placeholder-style" bindblur="userPhoneInput"/>
+    <input placeholder="密码：" password='true' class="placeholder-style" bindblur="userPasswordInput" value="{{password}}" />
+    <view class="flex">
+      <input placeholder="验证码：" class="code" value="{{code}}" bindblur="userCode"/>
+      <van-button type="info" wx:if="{{show}}"  bindtap="getCode">验证码({{countDownNum}})s</van-button>
+      <van-button type="info" wx:if="{{!show}}" bindtap="getCode">验证码</van-button>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="btnbox">
+      <van-button  type="info" bindtap="goLogin">立即登录</van-button>
+      <van-button  color="#7232dd" bindtap="register" >立即注册</van-button>
+    </view>
+  </view>
+</view>
